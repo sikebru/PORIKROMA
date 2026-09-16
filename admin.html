@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Porikroma Admin</title><link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">✦</span><span>PORIKROMA<small>ADMIN</small></span></a><button class="menu-btn" id="adminLogout">Logout</button></header>
+<main class="page"><section class="section">
+<div id="loginBox" class="form-card narrow"><h1>Admin Login</h1><form id="loginForm"><label>Email<input type="email" name="email" required></label><label>Password<input type="password" name="password" required></label><button class="btn primary full">Login</button><div id="loginMsg"></div></form></div>
+<div id="dashboard" style="display:none">
+<div class="section-head"><div class="eyebrow">PORIKROMA 2026</div><h1>Admin Dashboard</h1></div>
+<div class="admin-cards" id="stats"></div>
+<div class="form-card"><h2>Bookings</h2><div class="table-wrap"><table><thead><tr><th>Booking</th><th>Customer</th><th>Qty</th><th>Amount</th><th>Payment</th><th>Status</th><th>Action</th></tr></thead><tbody id="bookingRows"></tbody></table></div></div>
+<div class="form-card"><h2>Settings</h2><form id="settingsForm" class="grid2"><label>Pass price<input name="pass_price" type="number"></label><label>Delivery charge<input name="delivery_charge" type="number"></label><label>Max passes/booking<input name="max_passes_per_booking" type="number"></label><label>Available passes<input name="available_passes" type="number"></label><button class="btn primary">Save Settings</button></form><div id="settingsMsg"></div></div>
+</div></section></main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="js/config.js"></script><script src="js/admin.js"></script>
+</body></html>
